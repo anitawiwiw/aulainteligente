@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HorarioController;
+use App\Http\Controllers\MateriaController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('materias', MateriaController::class);
+
+Route::resource('horarios', HorarioController::class);
